@@ -1,2 +1,2 @@
 # blog
-My blog
+picky's blog, simple blog

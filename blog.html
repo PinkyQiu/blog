@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" type="text/css" href="blog.css">
+	<link rel="stylesheet" type="text/css" href="reset.css">
+	  <script type="text/javascript" src="tools.js"></script>
+	  <script type="text/javascript" src="base.js"></script>
+	  <script type="text/javascript" src="base_drag.js"></script>
+	  <script type="text/javascript" src="blog.js"></script>
+	  <script type="text/javascript" src="ajax.js"></script>
+	  <script type="text/javascript" src="baseForm.js"></script>
+</head>
+<body>
+  <div class="header-bg">
+	  <div class="header">
+			<img src="./img/blog.ico">
+			<div class="header-login"><span class="login">登录</span></div>
+			<div class="header-reg"><span class="reg">注册</span></div>
+			<div class="successInfo"></div>
+			<div class="right">
+				<a  class="person" href="#">个人中心</a>
+				<ul class="list">
+					<li><a href="#" class="passage">发文</a></li>
+					<li><a href="#" class="changeSkin">换肤</a></li>
+					<li><a href="#">帮助</a></li>
+					<li><a href="#">退出</a></li>
+				</ul>
+			</div>
+			<div id="login">
+				<div class="web-login clear">
+					<h2>网站登录</h2>
+					<img class="close" src="./img/close.jpg">
+				</div>
+				<form>
+					<div class="info">登录名或密码不合法</div>
+					<div class="login-form">
+						账号:<input type="text" name="text" /><br/>
+						密码:<input type="password" name="pass"/>
+					  <input type="button" class="confirm" name="sub"/>
+					</div>
+					<div class="register">
+						<a href="#">注册新用户</a>
+						<span>|</span>
+						<a href="#">忘记密码？</a>
+					</div>
+				</form>
+			</div>
+			<div id="reg">
+				<div class="web-reg clear">
+					<h2>会员注册</h2>
+					<img class="close" src="./img/close.jpg">
+				</div>
+				<form class="reg-form" name="reg">
+					<div class="form-left">
+					  <span>用&nbsp;户&nbsp;名:</span>
+					</div>
+					<div class="form-right">
+						<input type="text" name="user" class="text" />
+						<img class="img tips" src="./img/tips.jpg">
+						<img class="img error" src="./img/error.jpg">
+						<img class="img yes" src="./img/yes.jpg">
+						<img class="img zhanyong" src="./img/zhanyong.jpg">
+						<span class="loading">正在检测用户名，请稍后</span>
+					</div>
+					<div class="form-left">
+					  <span>密&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;码:</span>
+					</div>
+					<div class="form-right">
+						<input type="password" name="password"/>
+						<img class="img safe" src="./img/safe.jpg">
+						<img class="img safe1" src="./img/safe1.jpg">
+						<img class="img safe2" src="./img/safe2.jpg">
+						<img class="img safe3" src="./img/safe3.jpg">
+						<img class="img safe4" src="./img/safe4.jpg">
+						<img class="img safe5" src="./img/safe5.jpg">
+						<img class="img safe6" src="./img/safe6.jpg">
+						<img class="img safe7" src="./img/safe7.jpg">
+						<img class="img safe8" src="./img/safe8.jpg">
+						<img class="img error1" src="./img/error.jpg">
+						<img class="img yes1" src="./img/yes.jpg">
+					</div>
+					<div class="form-left">
+					  <span>密码确认:</span>
+					</div>
+					<div class="form-right">
+						<input type="password" name="pass"/>
+						<img class="img again" src="./img/again.jpg">
+						<img class="img no" src="./img/no.jpg">
+						<img class="img yes2" src="./img/yes.jpg">
+					</div>
+					<div class="form-left">
+					  <span>提&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;问:</span>
+					</div>
+					<div class="form-right">
+						<select class="ques" name="ques">
+							<option value="0">---请选择---</option>
+							<option value="1">你喜欢的动物</option>
+							<option value="2">你的名字</option>
+						</select>
+						<img class="img select" src="./img/select.jpg">
+					</div>
+					<div class="form-left">
+					  <span>回&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;答:</span>
+					</div>
+					<div class="form-right">
+						<input type="text" name="answer" />
+						<img class="img ansag" src="./img/ansag.jpg">
+						<img class="img ans" src="./img/ans.jpg">
+						<img class="img yes3" src="./img/yes.jpg">
+					</div>
+					<div class="form-left">
+					  <span>电子邮件:</span>
+					</div>
+					<div class="form-right">
+						<input type="text" name="email" autocomplete="off" />
+						<img class="img email" src="./img/email.jpg">
+						<img class="img emailno" src="./img/emailno.jpg">
+						<img class="img yes4" src="./img/yes.jpg">
+						<ul class="email-list">
+							<li><span></span>@qq.com</li>
+							<li><span></span>@163.com</li>
+							<li><span></span>@sohu.com</li>
+							<li><span></span>@wangyi.com</li>
+						</ul>
+					</div>
+					<div class="form-left">生&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;日:</div>
+					<div class="form-right">
+						<select class="years" name="year">
+							<option value="0">-年-</option>
+						</select>
+						<select class="years" name="month">
+							<option value="0">-月-</option>
+						</select>			
+						<select class="years" name="day">					
+							<option value="0">-日-</option>
+						</select>
+						<img class="img select1" src="./img/select.jpg">
+					</div>
+					<div class="form-left">
+					  <span class="tips">备&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;注:</span>
+					</div>
+					<div class="form-right">
+						<textarea name="tips"></textarea>
+					</div>
+					<div class="form-left"></div>
+					<div class="form-right">
+						<span class="num">还可以输入<strong>200</strong>字</span>
+						<span class="num" style="display:none;">已超过
+						<strong style="color:red;"></strong>字<span class="clean">清尾</span></span>
+					</div>
+					<div class="form-left"></div>
+					<div class="form-right">
+					  <input type="button" class="finish">
+					</div>
+				</form>
+			</div>	
+		</div>
+  </div>
+	<div id="blog">
+			<div class="blogTitle clear">
+				<h2>发表博文</h2>
+				<img class="close" src="./img/close.jpg">
+			</div>
+			<form class="blog-form clear" name="blog">
+			  <div class="info">发表失败，标题或内容不得为空</div>
+				<div class="formLeft">
+				  <span>标&nbsp;&nbsp;题:</span>
+				</div>
+				<div class="formRight">
+					<input type="text" name="title" class="text" />
+					<span>(*不可为空)</span>
+				</div>
+				<div class="formLeft">
+				  <span>内&nbsp;&nbsp;容:</span>
+				</div>
+				<div class="formRight">
+					<textarea class="textarea" name="content"></textarea>
+					<span class="no-blank">(*不可为空)</span>
+				</div>
+				<div class="formLeft">
+				</div>
+				<div class="formRight">
+				  <input type="button" class="sub-img" name="submit">
+				</div>		
+			</form>
+	</div>
+	<div id="skin">
+	  <div class="skinTitle clear">
+				<h2>更换皮肤</h2>
+				<img class="close" src="./img/close.jpg">
+			</div>
+		<div class="skinBg">
+			<ul class="skinList">
+			  <!-- <span class="load"></span> -->
+			</ul>
+		</div>
+		
+	</div>	
+	<div class="nav">
+	  <ul class="about">
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+		</ul>
+		<ul class="black">
+			<li>首页</li>
+			<li>图文列表</li>
+			<li>精彩相册</li>
+			<li>动感音乐</li>
+			<li>关于我</li>
+		</ul>
+		<div class="nav-bg">
+			<ul class="white">
+				<li>首页</li>
+				<li>图文列表</li>
+				<li>精彩相册</li>
+				<li>动感音乐</li>
+				<li>关于我</li>
+			</ul>
+		</div>
+	</div>
+	<div id="main">
+		<div class="sidebar">
+		  <h2>博文列表</h2>
+			<ul>
+				<li><a href="#">一键分享一键分享</a></li>
+				<li><a href="#">新浪微博新浪微博</a></li>
+				<li><a href="#">人人网人人网</a></li>
+				<li><a href="#">百度相册百度相册</a></li>
+			</ul>
+			<h2>博文列表</h2>
+			<ul>
+				<li><a href="#">一键分享一键分享</a></li>
+				<li><a href="#">新浪微博新浪微博</a></li>
+				<li><a href="#">人人网人人网</a></li>
+				<li><a href="#">百度相册百度相册</a></li>
+			</ul>
+			<h2>博文列表</h2>
+			<ul>
+				<li><a href="#">一键分享一键分享</a></li>
+				<li><a href="#">新浪微博新浪微博</a></li>
+				<li><a href="#">人人网人人网</a></li>
+				<li><a href="#">百度相册百度相册</a></li>
+			</ul>
+		</div>
+		<div class="index">
+		</div>
+		<div id="banner">
+			<img src="./img/niu1.jpg" alt="妞妞1">
+			<img src="./img/niu2.jpg" alt="妞妞2">
+			<img src="./img/niu3.jpg" alt="妞妞3">
+			<ul>
+				<li>●</li>
+				<li>●</li>
+				<li>●</li>
+			</ul>
+			<span></span>
+			<strong></strong>
+		</div>
+		<div id="photo">
+			<ul class="photo-list">
+			  <li>
+			  	<img xsrc="./img/n1.jpg" bigsrc="./img/n1.jpg" src="./img/change.jpg" alt="妞妞1">
+				  <span>妞妞</span>
+			  </li>
+			  <li>
+			  	<img xsrc="./img/n2.jpg" bigsrc="./img/n2.jpg" src="./img/change.jpg" alt="妞妞1">
+				  <span>妞妞</span>
+			  </li>
+			  <li>
+			  	<img xsrc="./img/n3.jpg" bigsrc="./img/n3.jpg" src="./img/change.jpg" alt="妞妞1">
+				  <span>妞妞</span>
+			  </li>
+			  <li>
+			  	<img xsrc="./img/n4.jpg" bigsrc="./img/n4.jpg" src="./img/change.jpg" alt="妞妞1">
+				  <span>妞妞</span>
+			  </li>
+			  <li>
+			  	<img xsrc="./img/n5.jpg" bigsrc="./img/n5.jpg" src="./img/change.jpg" alt="妞妞1">
+				  <span>妞妞</span>
+			  </li>
+			  <li>
+			  	<img xsrc="./img/n6.jpg" bigsrc="./img/n6.jpg" src="./img/change.jpg" alt="妞妞1">
+				  <span>妞妞</span>
+			  </li>
+			  <li>
+			  	<img xsrc="./img/n7.jpg" bigsrc="./img/n7.jpg" src="./img/change.jpg" alt="妞妞1">
+				  <span>妞妞</span>
+			  </li>
+			  <li>
+			  	<img xsrc="./img/n8.jpg" bigsrc="./img/n8.jpg" src="./img/change.jpg" alt="妞妞1">
+				  <span>妞妞</span>
+			  </li>
+				
+			</ul>
+		</div>
+	</div>
+	<div id="share">
+		<div class="share-head">分享到</div>
+		<ul class="share-list">
+			<li><a href="#">一键分享</a></li>
+			<li><a href="#">新浪微博</a></li>
+			<li><a href="#">人人网</a></li>
+			<li><a href="#">百度相册</a></li>
+			<li><a href="#">腾讯朋友</a></li>
+			<li><a href="#">豆瓣网</a></li>
+			<li><a href="#">百度新首页</a></li>
+			<li><a href="#">和讯微博</a></li>
+			<li><a href="#">qq空间</a></li>
+			<li><a href="#">百度搜索</a></li>
+			<li><a href="#">腾讯微博</a></li>
+			<li><a href="#">开心网</a></li>
+			<li><a href="#">百度贴吧</a></li>
+			<li><a href="#">搜狐新闻</a></li>
+			<li><a href="#">qq好友</a></li>
+			<li><a href="#">更多</a></li>
+		</ul>
+		<div class="share-footer">
+		  <img  class="sharepng" src="./img/share.png">
+			<a href="#">
+				<img src="./img/increase.png">
+				<span>百度分享</span>
+			</a>
+		</div>
+	</div>
+	<div id="photoBig">
+			<div class="photo-login clear">
+				<h2>图片预加载</h2>
+				<img class="close" src="./img/close.jpg">
+			</div>
+			<div class="bigList">
+				<img src="./img/load.png">
+				<strong class="sl"><</strong>
+				<strong class="sr">></strong>
+				<span class="sLeft"></span>
+				<span class="sRight"></span>
+				<div class="index"></div>
+			</div>
+	</div>
+	<div id="loading">
+		<p>正在加载，请稍后</p>
+	</div>
+	<div id="success">
+		<p>注册成功，请登录</p>
+	</div>
+	<div id="screen"></div>
+	<div class="footer">
+			<span>关于网易</span>
+			<span>关于网易免费邮</span>
+			<span>邮箱官方博客</span>
+			<span>客户服务</span>
+			<span>隐私政策</span>
+			<span>网易公司版权所有</span>
+			<span>1997-2003</span>
+	</div>
+
+
+
+
+
+
+	<!-- <div>div</div>
+	<div>div</div>
+	<div>div</div>
+	<div>div</div>
+	<div>div</div>
+	<div>div</div>
+	<div>div</div>
+	<div>div</div>
+	<div>div</div>
+	<div>div</div>
+	<div>div</div>
+	<div>div</div>
+	<div>div</div>
+	<div>div</div>
+	<div>div</div>
+	<div>div</div>
+	<div>div</div>
+	<div>div</div>
+	<div>div</div>
+	<div>div</div>
+	<div>div</div>
+	<div>div</div>
+	<div>div</div>
+	<div>div</div>
+	<div>div</div>
+	<div>div</div>
+	<div>div</div>
+	<div>div</div>
+	<div>div</div>
+	<div>div</div>
+	<div>div</div>
+	<div>div</div>
+	<div>div</div>
+	<div>div</div>
+	<div>div</div>
+	<div>div</div>
+	<div>div</div>
+	<div>div</div>
+	<div>div</div>
+	<div>div</div>
+	<div>div</div>
+	<div>div</div>
+	<div>div</div>
+	<div>div</div>
+	<div>div</div>
+	<div>div</div>
+	<div>div</div>
+	<div>div</div>
+	<div>div</div>
+	<div>div</div>
+	<div>div</div>
+	<div>div</div>
+	<div>div</div>
+	<div>div</div>
+	<div>div</div>
+	<div>div</div>
+	<div>div</div>
+	<div>div</div>
+	<div>div</div>
+	<div>div</div>
+	<div>div</div>
+	<div>div</div>
+	<div>div</div>
+	<div>div</div>
+	<div>div</div>
+	<div>div</div>
+	<div>div</div>
+	<div>div</div>
+	<div>div</div>
+	<div>div</div>
+	<div>div</div>
+	<div>div</div>
+	<div>div</div>
+	<div>div</div>
+	<div>div</div>
+	<div>div</div>
+	<div>div</div>
+	<div>div</div>
+	<div>div</div>
+	<div>div</div>
+	<div>div</div>
+	<div>div</div>
+	<div>div</div>
+	<div>div</div>
+	<div>div</div>
+	<div>div</div>
+	<div>div</div>
+	<div>div</div>
+	<div>div</div>
+	<div>div</div>
+	<div>div</div>
+	<div>div</div>
+	<div>div</div>
+	<div>div</div>
+	<div>div</div>
+	<div>div</div> -->
+
+  
+	
+
+</body>
+</html>
